@@ -1,326 +1,45 @@
-Requirements
-All your files will be interpreted/compiled on Ubuntu 18.04 LTS using python3 (version 3.7 or higher)
-The first line of all your files should be exactly #!/usr/bin/python3
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the PEP 8 style (version 1.7.\*)
-All your files must be executable
-All your modules should be documented: python3 -c 'print(**import**("my_module").**doc**)'
-Your code should not be executed when imported (by using if **name** == "**main**":)
-Tasks 0. Start a script
-#advanced
-Write a script markdown2html.py that takes an argument 2 strings:
+# Web Stack Specialization - Front-end
+![Holberton logo](https://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
+> Web Stack - Front-end
+
+## Description:bulb:
+* Advanced HTML/CSS
+* Developer Tools
+* SCSS
+* Flexbox
+* Responsive Design
+* Accesibility
+* Working with Designers
+* Design Implementation
+* Bootstrap
+* Advanced Javascript
+* Advanced JQuery
+* Cookies & Local Storage
+* ES6
+* Webpack
+* Building Portfolio Applications
+
+## Technologies & Tools:computer:
+
+![NPM](https://img.shields.io/badge/≡-NPM-CB3837?&style=flat-square&logo=npm&logoColor=CB3837&labelColor=282828)
+![Git](https://img.shields.io/badge/≡-Git-F05032?logo=git&style=flat-square&labelColor=282828)
+![Figma](https://img.shields.io/badge/≡-Figma-F24E1E?logo=Figma&style=flat-square&labelColor=282828)
+![HTML5](https://img.shields.io/badge/≡-HTML5-E34F26?&style=flat-square&logo=html5&labelColor=282828)
+![Ubuntu](https://img.shields.io/badge/≡-Ubuntu-E95420?&style=flat-square&logo=Ubuntu&labelColor=282828)
+![JavaScript](https://img.shields.io/badge/≡-JavaScript-F7DF1E?logo=javascript&style=flat-square&labelColor=282828)
+![GNU_Bash](https://img.shields.io/badge/≡-GNU_Bash-4EAA25?logo=GNU-Bash&style=flat-square&labelColor=282828)
+![Node.js](https://img.shields.io/badge/≡-Node.js-339933?logo=Node.js&style=flat-square&labelColor=282828)
+![Vim](https://img.shields.io/badge/≡-Vim-019733?logo=Vim&style=flat-square&logoColor=019733&labelColor=282828)
+![Pop!_OS](https://img.shields.io/badge/≡-Pop!_OS-48B9C7?logo=Pop_OS&style=flat-square&labelColor=282828)
+![VS_Code](https://img.shields.io/badge/≡-VS_Code-007ACC?logo=visual-studio-code&style=flat-square&logoColor=007ACC&labelColor=282828)
+![CSS3](https://img.shields.io/badge/≡-CSS3-1572B6?logo=CSS3&style=flat-square&logoColor=1572B6&labelColor=282828)
+![jQuery](https://img.shields.io/badge/≡-jQuery-0769AD?logo=jQuery&style=flat-square&logoColor=0769AD&labelColor=282828)
+![Bootstrap](https://img.shields.io/badge/≡-Bootstrap-7952B3?logo=Bootstrap&style=flat-square&labelColor=282828)
+![GitHub](https://img.shields.io/badge/≡-GitHub-181717?logo=GitHub&style=flat-square&labelColor=282828)
+![JSON](https://img.shields.io/badge/≡-JSON-000000?logo=JSON&style=flat-square&labelColor=282828)
+
+---
+
+## Author
+* **Getinet Amare** [@getinet-mekonnen](https://linkedin.com/in/getinet-mekonnen)
 
-First argument is the name of the Markdown file
-Second argument is the output file name
-Requirements:
-
-If the number of arguments is less than 2: print in STDERR Usage: ./markdown2html.py README.md README.html and exit 1
-If the Markdown file doesn’t exist: print in STDER Missing <filename> and exit 1
-Otherwise, print nothing and exit 0
-guillaume@vagrant:~/$ ./markdown2html.py
-Usage: ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ echo $?
-1
-guillaume@vagrant:~/$
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-Missing README.md
-guillaume@vagrant:~/$ echo $?
-1
-guillaume@vagrant:~/$
-guillaume@vagrant:~/$ echo "Test" > README.md
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-1. Headings
-   #advanced
-   Improve markdown2html.py by parsing Headings Markdown syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown HTML generated
-
-# Heading level 1 <h1>Heading level 1</h1>
-
-## Heading level 2 <h2>Heading level 1</h2>
-
-### Heading level 3 <h3>Heading level 1</h3>
-
-#### Heading level 4 <h4>Heading level 1</h4>
-
-##### Heading level 5 <h5>Heading level 1</h5>
-
-###### Heading level 6 <h6>Heading level 1</h6>
-
-guillaume@vagrant:~/$ cat README.md
-
-# My title
-
-## My title2
-
-# My title3
-
-#### My title4
-
-### My title5
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<h2>My title2</h2>
-<h1>My title3</h1>
-<h4>My title4</h4>
-<h3>My title5</h3>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-2. Unordered listing
-   #advanced
-   Improve markdown2html.py by parsing Unordered listing syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown:
-
-- Hello
-- Bye
-  HTML generated:
-
-<ul>
-    <li>Hello</li>
-    <li>Bye</li>
-</ul>
-guillaume@vagrant:~/$ cat README.md
-# My title
-- Hello
-- Bye
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<ul>
-<li>Hello</li>
-<li>Bye</li>
-</ul>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-3. Ordered listing
-   #advanced
-   Improve markdown2html.py by parsing Ordered listing syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown:
-
-- Hello
-- Bye
-  HTML generated:
-
-<ol>
-    <li>Hello</li>
-    <li>Bye</li>
-</ol>
-guillaume@vagrant:~/$ cat README.md
-# My title
-* Hello
-* Bye
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<ol>
-<li>Hello</li>
-<li>Bye</li>
-</ol>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-4. Simple text
-   #advanced
-   Improve markdown2html.py by parsing paragraph syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown:
-
-Hello
-
-I'm a text
-with 2 lines
-HTML generated:
-
-<p>
-    Hello
-</p>
-<p>
-    I'm a text
-        <br />
-    with 2 lines
-</p>
-guillaume@vagrant:~/$ cat README.md
-# My title
-- Hello
-- Bye
-
-Hello
-
-I'm a text
-with 2 lines
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<ul>
-<li>Hello</li>
-<li>Bye</li>
-</ul>
-<p>
-Hello
-</p>
-<p>
-I'm a text
-<br/>
-with 2 lines
-</p>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-5. Bold and emphasis text
-   #advanced
-   Improve markdown2html.py by parsing bold syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown HTML generated
-**Hello** <b>Hello</b>
-**Hello** <em>Hello</em>
-guillaume@vagrant:~/$ cat README.md
-
-# My title
-
-- He**l**lo
-- Bye
-
-Hello
-
-I'm **a** text
-with **2 lines**
-
-**Or in bold**
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<ul>
-<li>He<b>l</b>lo</li>
-<li>Bye</li>
-</ul>
-<p>
-Hello
-</p>
-<p>
-I'm <b>a</b> text
-<br/>
-with <em>2 lines</em>
-</p>
-<p>
-<b>Or in bold</b>
-</p>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-6. ... but why??
-   #advanced
-   Improve markdown2html.py by parsing bold syntax for generating HTML:
-
-Syntax: (you can assume it will be strictly this syntax)
-
-Markdown HTML generated description
-[[Hello]] 8b1a9953c4611296a827abf8c47804d7 convert in MD5 (lowercase) the content
-((Hello Chicago)) Hello hiago remove all c (case insensitive) from the content
-guillaume@vagrant:~/$ cat README.md
-
-# My title
-
-- He**l**lo
-- Bye
-
-Hello
-
-I'm **a** text
-with **2 lines**
-
-((I will live in Caracas))
-
-But it's [[private]]
-
-So cool!
-
-guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
-guillaume@vagrant:~/$ cat README.html
-
-<h1>My title</h1>
-<ul>
-<li>He<b>l</b>lo</li>
-<li>Bye</li>
-</ul>
-<p>
-Hello
-</p>
-<p>
-I'm <b>a</b> text
-<br/>
-with <em>2 lines</em>
-</p>
-<p>
-I will live in araas
-</p>
-<p>
-But it's 2c17c6393771ee3048ae34d6b380c5ec
-</p>
-<p>
-So cool!
-</p>
-guillaume@vagrant:~/$ 
-Spacing and new lines between HTML tags don’t need to be exactly this one
-
-Repo:
-
-GitHub repository: alx-frontend-for-fun
-File: markdown2html.py
-
-Copyright © 2023 ALX, All rights reserved.
