@@ -1,5 +1,5 @@
 /* Helpers */
-.visually-hidden {
+
   /* Your existing styles for visually-hidden */
   /* Add your global styles here */
 
@@ -21,7 +21,7 @@
 
 
 
-}
+
 
 .off-screen {
   left: -100vw;
