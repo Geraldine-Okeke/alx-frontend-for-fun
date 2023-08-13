@@ -2,7 +2,9 @@
 
   /* Your existing styles for visually-hidden */
   /* Add your global styles here */
-
+.visually-hidden{
+  
+}
 /* Card WORK section */
 .card-work .card-title {
   opacity: 1; 
