@@ -1,0 +1,19 @@
+/* Add your global styles here */
+
+/* Card WORK section */
+.card-work .card-title {
+  opacity: 1; 
+}
+
+.card-work .card-title a {
+  opacity: 0; 
+}
+
+.card-work .card-title a:focus,
+.card-work:hover .card-title a {
+  opacity: 1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+

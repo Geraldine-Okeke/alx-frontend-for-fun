@@ -38,8 +38,4 @@
 ![GitHub](https://img.shields.io/badge/≡-GitHub-181717?logo=GitHub&style=flat-square&labelColor=282828)
 ![JSON](https://img.shields.io/badge/≡-JSON-000000?logo=JSON&style=flat-square&labelColor=282828)
 
----
-
-## Author
-* **Getinet Amare** [@getinet-mekonnen](https://linkedin.com/in/getinet-mekonnen)
 
