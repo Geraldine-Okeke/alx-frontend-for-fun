@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="00-styles.css">
   </head>
   <body>
+    <nav id="a11y-primary-nav" class="navbar-menu" tabindex="-1">
+      <ul class="off-screen">
+        <li><a href="#a11y-primary-nav" class="skip-link">Skip to primary navigation</a></li>
+        <li><a href="#a11y-main-content" class="skip-link">Skip to main content</a></li>
+      </ul>
+    </nav>
     
     <header class="header" data-section-theme="dark">
       <div class="container">
@@ -66,7 +72,7 @@
       </div>
     </header>
     <!– Main –>
-    <main>
+    <main id="a11y-main-content" tabindex="-1">
       <h1 class="visually-hidden">Homepage</h1>
       <!– Hero section –>
       <section class="section-hero hero-homepage" data-section-theme="dark">
