@@ -1,0 +1,47 @@
+/* Helpers */
+.visually-hidden {
+  /* Your existing styles for visually-hidden */
+  /* Add your global styles here */
+
+/* Card WORK section */
+.card-work .card-title {
+  opacity: 1; 
+}
+
+.card-work .card-title a {
+  opacity: 0; 
+}
+
+.card-work .card-title a:focus,
+.card-work:hover .card-title a {
+  opacity: 1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+}
+
+.off-screen {
+  left: -100vw;
+  position: absolute;
+}
+
+.skip-link {
+  background: var(--color-black);
+  color: var(--color-white);
+  left: 0;
+  padding: 0.7rem;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  z-index: 10;
+  transform: translateY(-1rem);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  opacity: 1;
+  transform: translateY(0);
+}
